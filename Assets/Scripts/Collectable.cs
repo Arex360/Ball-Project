@@ -5,6 +5,7 @@ using UnityEngine;
 public class Collectable : MonoBehaviour
 {
     public Team supportedTeam;
+    
     public void Consume(){
         GameManager.instance.collectables.Remove(this);
         if(supportedTeam == Team.Green){

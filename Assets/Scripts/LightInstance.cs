@@ -22,7 +22,13 @@ public class LightInstance : MonoBehaviour
             
         }
     }
-    public void AddTarget(Transform target)=> this.target = target;
-    public void RemoveTarget()=> target = null;
-    public void ResetPosition()=> this.transform.position = defaultPosition;
+    public void AddTarget(Transform target){
+        this.target = target;
+    }
+    public void RemoveTarget() {
+        target = null;
+    }
+    public void ResetPosition(){
+        this.transform.position = defaultPosition;
+    }
 }

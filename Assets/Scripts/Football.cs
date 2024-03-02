@@ -39,8 +39,8 @@ public class Football : MonoBehaviour
     void Update()
     {
         if(team == Team.NoTeam) return;
-        moveHorizontal = Input.GetAxis("Horizontal");
-        moveVertical = Input.GetAxis("Vertical");
+        moveHorizontal = -Input.GetAxis("Horizontal");
+        moveVertical = -Input.GetAxis("Vertical");
 
         print("Horizontal (x): " + moveHorizontal);
         print("Vertical (y): " + moveVertical);
