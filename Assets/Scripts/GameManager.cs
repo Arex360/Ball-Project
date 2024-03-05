@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
+using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -13,8 +13,8 @@ public class GameManager : MonoBehaviour
     public List<Collectable> collectables;
     public int blueScore;
     public int greenScore;
-    public TextMeshProUGUI blueScoreText;
-    public TextMeshProUGUI greenScoreText;
+    public Text blueScoreText;
+    public Text greenScoreText;
     public GameObject cylinder;
     public Material getMat(Team team){
         Material mat = noTeam;

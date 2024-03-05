@@ -81,15 +81,16 @@ public class Football : MonoBehaviour
                 collectable.Consume();
             }
         }
-        else if(other.CompareTag("cylinder")){
-            Cylinder cylinder = other.GetComponent<Cylinder>();
-            cylinder.ChangeMat(meshRenderer.sharedMaterial);
-        }
         else if(other.CompareTag("DeadZone")){
             GameManager.instance.ResetScene();
         }
     }
-
+    private void OnCollisionEnter(Collision other) {
+        if(other.transform.CompareTag("cylinder")){
+            Cylinder cylinder = other.transform.GetComponent<Cylinder>();
+            cylinder.ChangeMat(meshRenderer.sharedMaterial);            
+        }
+    }
     public void JumpBall()
     {
         Vector3 jumpForce = new Vector3(0, 5, 0);
@@ -98,10 +99,6 @@ public class Football : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter(Collision collision)
-    {
-
-    }
     private void OnMouseDown() {
         Football[] footballs = GameObject.FindObjectsOfType<Football>();
         foreach(Football football in footballs){
