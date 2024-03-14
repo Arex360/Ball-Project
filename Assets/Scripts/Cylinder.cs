@@ -19,13 +19,13 @@ public class Cylinder : MonoBehaviour
         }
     }
 
-    public void ResetMat() {
-        renderer.sharedMaterial = defaultMat;
+    public void ResetColor() {
+        renderer.sharedMaterial.color = Color.yellow;
     }
-    public void ChangeMat(Material mat){
-        renderer.sharedMaterial = mat;
+    public void ChangeColor(Color color){
+        renderer.sharedMaterial.color = color;
     }
     private void OnMouseDown(){
-        ResetMat();
+        ResetColor();
     }
 }

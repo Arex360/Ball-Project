@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightInstance : MonoBehaviour
+public class MySpotLight : MonoBehaviour
 {
     public Transform target;
     private Vector3 defaultPosition;
-    public Team supportedTeam;
+    public int allowedTeam;
     void Start()
     {
         defaultPosition = this.transform.position;
