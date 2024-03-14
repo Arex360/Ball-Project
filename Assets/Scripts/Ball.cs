@@ -82,8 +82,7 @@ public class Ball : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other) {
         if(other.transform.CompareTag("cylinder")){
-            Cylinder cylinder = other.transform.GetComponent<Cylinder>();
-            cylinder.ChangeColor(renderer.sharedMaterial.color);            
+            Cylinder cylinder = other.transform.GetComponent<Cylinder>();          
         }
     }
     private void OnMouseDown() {
